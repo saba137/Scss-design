@@ -1,0 +1,38 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  width: 1280px;
+}
+
+.header {
+  background-color: #752dfa;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #752dfa;
+  height: 200px;
+}
+
+.navbar .main-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
+
+.navbar .main-menu li {
+  color: white;
+  margin-left: 60px;
+}
+/*# sourceMappingURL=styles.css.map */

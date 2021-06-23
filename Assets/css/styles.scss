@@ -1,0 +1,625 @@
+
+@font-face {
+	src: url('./../../assets/fonts/Gilroy-Light.ttf');
+	font-family: 'GilroyLight';
+	font-display: swap;
+}
+@font-face {
+	src: url('./../../assets/fonts/Gilroy-Bold.ttf');
+	font-family: 'GilroyBold';
+	font-display: swap;
+}
+@font-face {
+    src: url('./../Fonts/Gilroy-Regular.ttf');
+    font-family: 'Gilroy-Regular';
+    font-display: swap;
+
+}
+
+@mixin card {
+    // height: 300px;
+    max-width: 250px;
+    border-radius: 30px;
+    background-color: $card1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px 25px 10px 25px;
+    margin-left: 30px;
+}
+@mixin color {
+    width: 20px;
+        height: 20px;
+        
+        border-radius: 50%;
+        border: none;
+        margin-bottom: 5px;
+}
+@mixin btn {
+    width: 100px;
+    height: 45px;
+    color: $text-color;
+    border: none;
+    border-radius: 15px;
+    padding-top: 0;
+    align-items: center;
+    cursor: pointer;
+}
+@mixin price-tag {
+    max-width: 80px;
+    border-radius: 10px;
+    justify-content: flex-end;
+    position: relative;
+    margin: 0 0 0 auto;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+}
+$bg-color: rgb(84, 108, 243);
+$input: rgba(125, 145, 255, 0.733);
+$bg-color-dark: rgb(31, 31, 85);
+$text-color: white;
+$btn-color: rgb(238, 118, 63);
+$card1: rgb(245, 149, 59);
+$tag1: rgb(247, 176, 110);
+$tag2:rgb(243, 123, 129);
+$tag3:rgb(253, 237, 166);
+$card2: rgb(245, 87, 95);
+$card3: rgb(245, 223, 125);
+$color-btn-green: rgb(82, 204, 82);
+$icon-color: rgba(255, 255, 255, 0.726);
+$font-family1: 'GilroyLight';
+$font-family2: 'GilroyBold';
+$font-family3: 'Gilroy-Regular';
+*{
+    box-sizing: border-box;
+    
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    padding-top: 0;
+    margin-top: 0;
+    margin-left: 0;
+    
+}
+.container{
+    width: 1280px;
+    
+}
+.header{
+    background-color: $bg-color;
+   
+}
+.text{
+    display: flex;
+    
+}
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $bg-color;
+    margin-bottom: 0;
+    width: 100%;
+    background-image: url(/Assets/Images/blur2.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 200px;
+   
+    
+    figure{
+        justify-content: flex-start;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .main-menu{
+      
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    align-items: center;
+        li{
+            color: $text-color;
+            margin-left: 60px;
+            font-family: $font-family1;
+            .Button{
+                @include btn();
+                background-color: $btn-color;
+            }
+        }
+    }
+
+}
+::placeholder {
+    color: $text-color;
+    opacity: 1; 
+  }
+  
+  :-ms-input-placeholder { 
+   color: $text-color;
+  }
+.head-banner{
+    background-color: $bg-color;
+    margin-top: 0;
+    background-image: url(/Assets/Images/blur1.png) ;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 250px;
+    .banner{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .content{
+        color: $text-color;
+        padding: 20px 20px 60px 0px;
+        width: 65%;
+        .input-field{
+            display: flex;
+            position: relative;
+
+        }
+        .banner-heading{
+            font-size: 32px;
+            letter-spacing: 0.5px;
+            font-family: $font-family2;
+            margin-bottom: 0px;
+         }
+         p{
+             font-family: $font-family3;
+             line-height: 35px;
+             margin-top: 5px;
+             font-size: 14px;
+             color: $icon-color
+             
+         }
+         .input-btn{
+            @include btn();
+            background-color: $bg-color;
+                position: absolute;
+                left: 295px;
+                top: 5px;
+        }
+        .input{
+            width: 400px;
+            border: none;
+            padding: 20px 10px 20px 20px;
+            border-radius: 20px;
+            background-color: $input;
+            color: $text-color;
+            font-family: $font-family1;
+         }
+         
+         .logo-circle{
+             width: 50px;
+             height: 50px;
+             margin-top: 20px;
+         }
+         span{
+             margin-top: 0;
+             font-family: $font-family2;
+             margin-left: 15px;
+             margin-top: 25px;
+             display: flex;
+             align-items: center;
+         }
+    
+    }
+    .banner-figure{
+        display: flex;
+        // background-image: url(/Assets//Images/banner-img2.png), url(/Assets//Images/banner-img3.png);
+        // background-repeat: no-repeat;
+        // background-position: left center , right bottom ;
+        background-size: 170px;
+        margin-right: 100px;
+        position: relative;
+        left: -31%;
+        .background-img{
+            display: flex;
+            position: relative;
+            width: 65px;
+            .banner-img-blur1{
+                
+                width: 200px;
+                height: 185px;
+                position: absolute;
+                top: 25%;
+                left: -56%;
+                right: 70%;
+               
+                
+            }
+            .banner-img-blur2{
+                width: 200px;
+                height: 180px;
+                position: absolute;
+                top: 70%;
+                left: 305px;
+                right: 70%;
+                
+            }
+        }
+    }
+    .banner-img{
+        width: 450px;
+        height: 600px;
+     
+    }
+    .position-img{
+   
+        position: absolute;
+        top: -25%;
+        z-index: 10px;
+        left: 55%;
+        
+    }
+    
+}
+.dash{
+    color: $text-color;
+    padding-left: 115px;
+}
+.paragraph{
+    color: $text-color;
+    font-family: $font-family1;
+    line-height: 30px;
+    margin-bottom: 0;
+    padding: 1px 20px 20px 115px;
+
+}
+.collection{
+    // margin-top: 10px;
+    background: linear-gradient(180deg, $bg-color-dark 65%, $bg-color 35%);
+    padding: 35px 30px 35px 35px;
+    height: fit-content;
+    figure{
+        margin: 0;  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        .logo-short{
+            width: 80px;
+            height: 80px;
+            margin-top: 20px;
+        }
+    }
+    .shirts{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+        .shirt11{
+            margin-top: 20px;
+            width: 450px;
+            height: 400px;
+            filter: blur(6px);
+            margin-left: 10px;
+        }
+        .shirt12{
+            margin-top: 20px;
+            width: 550px;
+            height: 500px;
+        }
+        .shirt13{
+            margin-top: 20px;
+            width: 450px;
+            height: 400px;
+            filter: blur(6px);
+            margin-left: 10px;
+        }
+        
+    }
+}
+.description{
+    background-color: $bg-color-dark;
+    .desc{
+        padding: 30px 30px 30px 30px;
+        h1{
+            color:$text-color;
+            display: flex;
+            justify-content: center;
+            margin-top: 0;
+            
+        }
+    
+    .heading{
+        font-size: 36px;
+            letter-spacing: 0.5px;
+            font-family: $font-family1;
+            margin-bottom: 0px;
+            color: $text-color;
+            text-align: center;
+            margin-top: 0;
+    }
+    .paragraph{
+        text-align: center;
+        font-weight: normal;
+    }
+}
+}
+.price-tag{
+    @include price-tag();
+    background-color: $input;
+}
+.price-tag1{
+    @include price-tag();
+    background-color: $tag1;
+   
+}
+.price-tag2{
+    @include price-tag();
+    background-color: $tag2;
+   
+}
+.price-tag3{
+    @include price-tag();
+    background-color: $tag3;
+
+}
+.center-banner{
+    background-color: $bg-color;
+    margin-top: 0;
+    padding: 95px 89px 70px 83px;
+    .banner{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .content{
+        color: $text-color;
+        padding: 20px 20px 20px 20px;
+        
+        .heading{
+            font-size: 32px;
+                letter-spacing: 0.5px;
+                font-family: $font-family1;
+                color: $text-color;
+                margin: 0 auto;
+                font-weight: lighter;
+        }
+         p{
+             font-family: $font-family1;
+             line-height: 35px;
+             margin-top: 5px;
+             
+         }
+         .input-field{
+            display: flex;
+            position: relative;
+
+        }
+         .input{
+            width: 400px;
+            border: none;
+            padding: 20px 10px 20px 20px;
+            border-radius: 20px;
+            background-color: $input;
+            font-family: $font-family1
+         }
+         .input-btn{
+            @include btn();
+            background-color: $bg-color;
+            position: absolute;
+            top: 9%;
+            left: 58%;
+        }
+         .logo-circle{
+             width: 50px;
+             height: 50px;
+             margin-top: 20px;
+         }
+         span{
+             margin-top: 0;
+             font-family: $font-family2;
+             margin-left: 15px;
+             margin-top: 25px;
+             display: flex;
+             align-items: center;
+         }
+    
+    }
+    .banner-img{
+        width: 500px;
+        height: 500px;
+    }
+}
+.bottom-banner{
+    background-color: $text-color;
+    padding: 100px 10px 50px 15px;
+    color: $text-color;
+    font-family: $font-family2;
+    .bg{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+   
+
+    .card-slected{
+
+        @include card();
+        // height: 400px;
+        max-width: 250px;
+        background-color: $bg-color;
+        .shirt-desc{
+           
+            display: flex;
+            -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        .card-content{
+            display: flex;
+            flex-direction: column;
+        }
+        .card-img{
+            height: 320px;
+            width: 300px;
+            margin-bottom: 10px;
+            display: flex;
+            align-self: center;
+        }
+        
+    }
+    .shirt-heading{
+        font-size: 20px;
+        font-family: $font-family3;
+        margin-bottom: 0;
+    }
+    .size{
+        font-family: $font-family3;
+        font-weight: normal;
+    }
+    span{
+        margin-top: 5px;
+        margin-bottom: 5px; 
+      
+    }
+    .btn-list{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 10px;
+        .btn{
+            width: 30px;
+            height: 30px;
+            border-radius: 10px;
+            border: none;
+            margin-right: 10px;
+            background-color: $input;
+            color: $text-color;
+        }
+    }
+    .card1{
+        @include card();
+        background-color:$card1;
+        max-width: 200px;
+        max-height: 300px
+    }
+    .card2{
+        @include card();
+        background-color:$card2;
+        max-width: 200px;
+        max-height: 300px
+    }
+    .card3{
+        @include card();
+        background-color:$card3;
+        max-width: 200px;
+        max-height: 300px
+    }
+}
+.card-img{
+    height: 250px;
+    width: 200px;
+    margin-bottom: 10px;
+    display: flex;
+    align-self: center;
+}
+
+.colors-list{
+    display: flex;
+    flex-direction: column;
+   
+    .color-btn1{
+        @include color();
+        background-color: $card2;
+    }
+    .color-btn2{
+        @include color();
+        background-color: $color-btn-green;
+    }
+    .color-btn3{
+        @include color();
+        background-color: $text-color;
+    }
+}
+.card-heading{
+    display: flex;
+}
+.footer{
+    background-color: $bg-color;
+    
+    padding: 30px 30px 0px 30px;
+
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 55px auto;
+        .icons{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            li{
+                list-style: none;
+                height: 20px;
+                width: 20px;
+                margin-right: 50px;
+                align-items: center;
+                background-color: $input;
+                background-size: 150px;
+                border-radius: 10px;
+               i{
+                background-color: $input;
+                width: 30px;
+                height: 30px;
+                background-size: 200px;
+                border-radius: 5px;
+                color: $icon-color;
+                display: flex;
+                align-items: center;
+                  justify-content: center;
+                  font-size: 20px;
+               }
+            }
+        }
+    }
+    span{
+        font-size: 32px;
+        font-family: $font-family3;
+        color: $text-color;
+        font-weight: normal;
+        padding-left: 35px;
+        padding-bottom: 30px;
+    }
+    .small{
+        font-size: 14px;
+        font-family: $font-family3;
+        color: $text-color;
+        font-weight: 200px;
+        padding-left: 35px;
+    }
+    .navbar-bottom{
+        display: flex;
+        justify-content: space-between;
+        background-color: $bg-color;
+        margin-bottom: 0;
+        width: 100%;
+        align-items: baseline;
+     
+       
+    .main-menu-bottom{
+      
+        display: flex;
+        justify-content: flex-start;
+        text-decoration: none;
+        list-style: none;
+        color: white;
+        align-items: center;
+        font-size: 14px;
+            li{
+                color: $text-color;
+                margin-right: 60px;
+                margin-left: 0;
+                padding-left: 0;
+                font-family: $font-family1;
+              
+            }
+        }
+}
+}

@@ -1,0 +1,33 @@
+$bg-color: rgb(117, 45, 250);
+$bg-color-dark: rgb(31, 31, 85);
+$text-color: white;
+$btn-color: rgb(248, 99, 0);
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    width: 1280px;
+}
+.header{
+    background-color: $bg-color;
+}
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    background-color: $bg-color;
+    height: 200px;
+    .main-menu{
+        display: flex;
+        text-decoration: none;
+        list-style: none;
+        color: $text-color;
+        li{
+            color: $text-color;
+            margin-left: 60px;
+
+        }
+    }
+
+}
