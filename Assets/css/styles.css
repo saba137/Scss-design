@@ -563,6 +563,7 @@ html, body {
   padding: 10px 25px 10px 25px;
   margin-left: 30px;
   max-width: 250px;
+  max-height: 480px;
   background-color: #546cf3;
 }
 
@@ -778,6 +779,11 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.footer .footer-content .icons a {
+  text-decoration: none;
+  list-style: none;
 }
 
 .footer .footer-content .icons li {

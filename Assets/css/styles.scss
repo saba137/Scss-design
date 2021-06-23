@@ -444,6 +444,7 @@ html, body{
         @include card();
         // height: 400px;
         max-width: 250px;
+        max-height: 480px;
         background-color: $bg-color;
         .shirt-desc{
            
@@ -555,6 +556,10 @@ html, body{
             display: flex;
             justify-content: space-evenly;
             align-items: center;
+            a{
+                text-decoration: none;
+                list-style: none;
+            }
             li{
                 list-style: none;
                 height: 20px;
